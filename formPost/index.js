@@ -1,25 +1,20 @@
-console.log("formpost");
+// form post will take user to another welcome page
 import express from 'express';
 import bodyParser from 'body-parser';
 import {dirname} from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const urlencoded = bodyParser.urlencoded({ extended: true });
 const app = express();
 const port = 8000;
-//Api Middlewares
-app.use(express.json()); //this is to accept json format
-app.use(express.urlencoded()); //this is to decode data send through html file
- app.use(express.static('register.html'));
- app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended:true}));
 
 //Api routes
  app.get('/register',function (req ,res){
-     res.sendFile(__dirname + '/register.html');
+     res.sendFile(__dirname + '/register.html')
+    
  });
 
-app.post('/formpost',urlencodedParser ,(req,res)=>{
+app.post('/post.html',urlencoded ,(req,res)=>{
     console.log(req.body);  //the data we get is in the body of request
 
      res.sendFile(__dirname + '/post.html'); //if want to go another html page

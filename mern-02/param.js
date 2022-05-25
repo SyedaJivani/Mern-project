@@ -1,3 +1,4 @@
+// take two parameter( one string and one num)it will return string the times the num is enteres
 let num;
 let string;
 function params(num,string){

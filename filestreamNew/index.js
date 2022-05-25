@@ -17,7 +17,7 @@ http.createServer(function (req , res){
 
     })
 
-
+// read and write stream
     var content = '';
     var reader = fs.createReadStream ('read.txt');
     reader.setEncoding('UTF-8');

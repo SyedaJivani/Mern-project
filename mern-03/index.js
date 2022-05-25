@@ -1,3 +1,4 @@
+// take two parameters one string and one num it will print each string after interval
 let num;
 let string;
 function params(num,string){

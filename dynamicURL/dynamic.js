@@ -1,5 +1,5 @@
 
-
+//dynamic url
 import fs from 'fs'
 import http from 'http'
 import url from 'url';

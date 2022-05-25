@@ -1,4 +1,4 @@
-console.log("redirection");
+//redirection
 
 import fs from 'fs'
 import http from 'http'
